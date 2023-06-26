@@ -1,0 +1,38 @@
+﻿README
+
+
+Steps to Execute Code:
+1. Read data from CGMData.csv and InsulinData.csv files
+
+
+2. Parse both datafiles into date, time format
+
+
+3. Drop dates with missing values
+
+
+4. Identify start of auto mode using Insulin alarm system
+
+
+5. Divide CGM data based on Auto start value
+
+
+6. At start of whole day, calculate percentage of time in given range. Range: hyperglycemia (CGM > 180 mg/dL), hyperglycemia critical (CGM> 250 mg/dL), range (CGM >= 70 mg/dL and CGM<= 180 mg/dL), range secondary (CGM >= 70 mg/dLand CGM <= 150 mg/dL), hypoglycemia level 1 (CGM <70 mg/dL) and hypoglycemia level 2 (CGM <54 mg/dL)
+
+
+7. At start of daytime, calculate percentage of time in given range. Range: hyperglycemia (CGM > 180 mg/dL), hyperglycemia critical (CGM> 250 mg/dL), range (CGM >= 70 mg/dL and CGM<= 180 mg/dL), range secondary (CGM >= 70 mg/dLand CGM <= 150 mg/dL), hypoglycemia level 1 (CGM <70 mg/dL) and hypoglycemia level 2 (CGM <54 mg/dL)
+
+
+8. At start of overtime, calculate percentage of time in given range. Range: hyperglycemia (CGM > 180 mg/dL), hyperglycemia critical (CGM> 250 mg/dL), range (CGM >= 70 mg/dL and CGM<= 180 mg/dL), range secondary (CGM >= 70 mg/dLand CGM <= 150 mg/dL), hypoglycemia level 1 (CGM <70 mg/dL) and hypoglycemia level 2 (CGM <54 mg/dL)
+
+
+9. Store the calculated values in a data frame
+
+
+10. Find mean of all auto mode percentages for all the days
+
+
+11. Find the mean of all manual mode percentages for all the days
+
+
+12. Upload to results.csv
